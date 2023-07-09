@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BigBang Assessment 2.props" />
+</Project>
