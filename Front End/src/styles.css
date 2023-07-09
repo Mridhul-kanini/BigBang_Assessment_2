@@ -1,0 +1,105 @@
+/* Customize the container styles */
+.toast-container {
+    z-index: 9999;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .toast-top-right {
+    top: 1rem !important;
+    right: 1rem !important;
+    margin-top: 0 !important;
+  }
+  
+  .toast-container {
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  
+  .toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 350px; /* Adjust the width as needed */
+    z-index: 9999;
+  }
+  
+  .toast-top-right {
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+  
+  .toast-container .toast {
+    margin-bottom: 1rem;
+  }
+  
+  .toast-message {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #323232;
+    color: #ffffff;
+  }
+  
+  .toast-success .toast-message {
+    background-color: #28a745;
+  }
+  
+  .toast-error .toast-message {
+    background-color: #dc3545;
+  }
+  
+  .toast-close-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .toast-progress-bar {
+    background-color: #6c757d;
+    height: 4px;
+  }
+  
+  
+  /* Customize the toast message styles */
+  .toast-message {
+    @apply inline-block p-4 text-white font-semibold rounded shadow-md;
+  
+    /* Customize the background color */
+    @apply bg-gray-900;
+  
+    /* Customize the text color */
+    @apply text-gray-100;
+  }
+  
+  /* Customize the success toast message styles */
+  .toast-success .toast-message {
+    @apply bg-green-500;
+  }
+  
+  /* Customize the error toast message styles */
+  .toast-error .toast-message {
+    @apply bg-red-500;
+  }
+  
+  /* Customize the close button styles */
+  .toast-close-button {
+    @apply absolute top-1 right-1 p-2 text-gray-100;
+  
+    /* Customize the close button color */
+    @apply text-gray-300;
+  
+    /* Customize the close button hover color */
+    @apply hover:text-gray-100;
+  }
+  
+  /* Customize the progress bar styles */
+  .toast-progress-bar {
+    @apply bg-gray-300 h-1;
+  }
+  

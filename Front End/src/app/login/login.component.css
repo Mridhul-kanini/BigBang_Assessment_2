@@ -1,0 +1,51 @@
+/* Customize the success toast background color */
+.toast-success {
+    background-color: #68D391;
+  }
+  
+  /* Customize the error toast background color */
+  .toast-error {
+    background-color: #E53E3E;
+  }
+  
+  /* Customize the container styles */
+  .toast-container {
+    font-family: Arial, sans-serif;
+    width: 300px;
+  }
+  
+  /* Customize the toast message styles */
+  .toast-message {
+    padding: 10px;
+    color: #FFF;
+    font-size: 14px;
+  }
+  
+  /* Customize the close button styles */
+  .toast-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Customize the success icon styles */
+  .toast-success .toast-icon {
+    background-color: #68D391;
+  }
+  
+  /* Customize the error icon styles */
+  .toast-error .toast-icon {
+    background-color: #E53E3E;
+  }
+  
+  /* Customize the progress bar styles */
+  .toast-progress-bar {
+    background-color: #FFF;
+    height: 2px;
+  }
+  
+  /* Add more styles as per your requirement */
+  

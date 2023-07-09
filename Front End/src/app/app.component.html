@@ -1,0 +1,13 @@
+<div class="flex flex-col h-screen">
+  <nav *ngIf="isDoctorLoggedIn()">
+    <app-docnav></app-docnav>
+  </nav>
+  <nav *ngIf="isAdminLoggedIn()">
+    <app-sidebar></app-sidebar>
+  </nav>
+  <nav *ngIf="isPatientLoggedIn()">
+    <app-navbar></app-navbar>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

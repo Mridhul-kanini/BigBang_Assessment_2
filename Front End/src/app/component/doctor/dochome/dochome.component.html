@@ -1,0 +1,25 @@
+<app-docnav></app-docnav>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+    <div *ngFor="let patient of patients" [class]="getCardClass(patient) + ' card'"
+      class="rounded-lg shadow-md p-6 flex flex-col justify-between relative">
+      <div>
+        <img [src]="patient.profilePicture" alt="Patient Image" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h3 class="text-xl font-bold">{{ patient.firstName }} {{ patient.lastName }}</h3><br>
+        <p class="text-gray-600"><b>Age:</b> {{ patient.age }}</p>
+        <p class="text-gray-600"><b>Gender:</b> {{ patient.gender }}</p>
+        <p class="text-gray-600"><b>Diagnosis:</b> {{ patient.diagnosis }}</p>
+      </div>
+      <div>
+        <div *ngIf="patient.showButtons" class="flex mt-4 justify-between">
+          <button (click)="selectDropdownOption(patient, 'All Clear')" class="button clear">Clear</button>
+          <button (click)="selectDropdownOption(patient, 'Need to give attention')"
+            class="button serious">Serious</button>
+          <button (click)="selectDropdownOption(patient, 'Critical')" class="button danger">Danger</button>
+        </div>
+        <p *ngIf="patient.dropdownOption" class="text-gray-600 mt-2">{{ patient.dropdownOption }}</p>
+      </div>
+    </div>
+  </div>
+</div>

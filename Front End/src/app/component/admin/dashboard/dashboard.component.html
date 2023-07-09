@@ -1,0 +1,31 @@
+<app-sidebar></app-sidebar>
+
+
+<div class="w-3/4 mx-72 ml-1/4 my-10">
+  <div class="w-full ml-1/6">
+    <h1 class="text-2xl font-bold mb-4">Hospital Report</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 bg-white shadow-md rounded">
+        <h2 class="text-lg font-semibold">Hospital Service Report</h2>
+        <canvas id="chartCanvas" class="my-4"></canvas>
+      </div>
+    </div>
+
+    <h1 class="text-2xl font-bold my-5 mb-4">Doctors Report</h1>
+
+    <div class="grid grid-cols-1 my-8 md:grid-cols-2 gap-4">
+      <div *ngFor="let doctor of doctors" class="p-4 bg-white shadow-md rounded relative">
+        <div class="flex items-center">
+          <img src="{{ doctor.profilePicture }}" alt="Profile Picture" class="w-20 h-16 rounded-full mr-8">
+          <div>
+            <h2 class="text-lg font-semibold">{{ doctor.firstName }} {{ doctor.lastName }}</h2>
+            <p class="text-gray-600">Specialization: {{ doctor.specialization }}</p>
+            <p class="text-gray-600">Email: {{ doctor.email }}</p>
+            <p class="text-gray-600">Degree: {{ doctor.degree }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

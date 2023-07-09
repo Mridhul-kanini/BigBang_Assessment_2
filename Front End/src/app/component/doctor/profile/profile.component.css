@@ -1,0 +1,106 @@
+.profile {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 4%;
+    margin-left: 3%;
+  }
+  
+  .profile h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-details .detail input {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .profile .profile-image {
+    margin-bottom: 40px;
+  }
+  
+  .profile .profile-image label {
+    display: inline-block;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .profile .profile-image label img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile .profile-image label span {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .profile .profile-image button {
+    background-color: #444444;
+    margin-left: 5%;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile .profile-image button i {
+    margin-right: 5px;
+  }
+  
+  .profile .profile-image button:hover {
+    background-color: #c33929;
+  }
+  
+  .profile .profile-details .detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 500px;
+  }
+  
+  .profile .profile-details .detail label {
+    flex: 0 0 150px;
+  }
+  
+  .profile .profile-details .detail span {
+    flex: 1;
+  }
+  
+  .profile .profile-details .detail input {
+    flex: 1;
+    margin-left: 10px;
+    
+  }
+  
+  .profile .save-button {
+    margin-top: 20px;
+    margin-left: 15%;
+  }
+  
+  .profile .save-button button {
+    background-color: #39a86d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile .save-button button i {
+    margin-right: 5px;
+  }
+  
+  .profile .save-button button:hover {
+    background-color: #30825f;
+  }
+  

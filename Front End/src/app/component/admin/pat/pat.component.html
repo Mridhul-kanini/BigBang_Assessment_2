@@ -1,0 +1,35 @@
+<app-sidebar></app-sidebar>
+
+<div class="w-full sm:w-5/6 ml-auto">
+  <div class="mx-auto max-w-7xl px-4 py-8">
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y mx-auto divide-gray-200">
+        <thead>
+          <tr>
+            <th
+              class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Name</th>
+            <th
+              class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Age</th>
+            <th
+              class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Gender</th>
+            <th
+              class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Phone Number</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let patient of patients">
+            <td class="px-6 py-4 whitespace-no-wrap">{{ patient.firstName }} {{ patient.lastName }}</td>
+            <td class="px-6 py-4 whitespace-no-wrap">{{ patient.age }}</td>
+            <td class="px-6 py-4 whitespace-no-wrap">{{ patient.gender }}</td>
+            <td class="px-6 py-4 whitespace-no-wrap">{{ patient.phoneNumber }}</td>
+            <td class="px-6 py-4 whitespace-no-wrap">{{ getDiagnosis(patient) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

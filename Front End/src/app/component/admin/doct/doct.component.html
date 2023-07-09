@@ -1,0 +1,28 @@
+<app-sidebar></app-sidebar>
+
+<div class="w-full sm:w-5/6 ml-auto">
+  <div class="mx-auto max-w-7xl px-4 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+      <div *ngFor="let doctor of doctors" class="bg-white rounded-lg shadow-md p-6 relative">
+
+        <img [src]="doctor.profilePicture" alt="Doctor Image" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xl font-bold">{{ doctor.firstName }} {{ doctor.lastName }}</h3>
+        </div>
+        <p class="text-gray-600">{{ doctor.specialization }}</p>
+        <p class="text-gray-600">{{ doctor.degree }}</p>
+        <p class="text-gray-600">{{ doctor.phonenumber }}</p>
+        <div class="flex items-center mx-16 mt-5 space-x-4">
+          <button *ngIf="!doctor.approved && !doctor.declined"
+            class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+            (click)="approveDoctor(doctor)">Approve</button>
+          <button *ngIf="!doctor.approved && !doctor.declined"
+            class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+            (click)="declineDoctor(doctor)">Decline</button>
+          <span *ngIf="doctor.approved" class="text-green-600">Approved</span>
+          <span *ngIf="doctor.declined" class="text-red-600">Declined</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
